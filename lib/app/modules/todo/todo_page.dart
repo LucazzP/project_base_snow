@@ -41,7 +41,7 @@ class _TodoPageState extends ModularState<TodoPage, TodoController> {
           }
 
           return RefreshIndicator(
-            onRefresh: () => controller.getTodos(),
+            onRefresh: controller.getTodos,
             child: Scrollbar(
               child: ListView.builder(
                 itemCount: controller.listTodos.value.length,

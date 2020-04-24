@@ -10,7 +10,9 @@ class TodoRepositoryDio implements TodoRepository {
   Future<List<TodoModel>> getTodos() async {
     final response =
         await _client.get<List>('https://jsonplaceholder.typicode.com/todos/');
-    return response.data.map<TodoModel>((element) => TodoModel.fromMap(element)).toList();
+    return response.data
+        .map<TodoModel>((element) => TodoModel.fromMap(element))
+        .toList();
   }
 
   //dispose will be called automatically

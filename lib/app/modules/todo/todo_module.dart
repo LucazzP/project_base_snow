@@ -1,8 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:project_sample_base/app/modules/todo/repositories/todo_repository_dio.dart';
-import 'todo_controller.dart';
-import 'repositories/todo_repository.dart';
 
+import 'repositories/todo_repository.dart';
+import 'todo_controller.dart';
 import 'todo_page.dart';
 
 class TodoModule extends ChildModule {

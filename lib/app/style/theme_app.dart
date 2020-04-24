@@ -1,43 +1,38 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:project_sample_base/app/style/app_bar_theme_app.dart';
+import 'package:project_sample_base/app/style/color_scheme_app.dart';
+import 'package:project_sample_base/app/style/text_theme_app.dart';
 
-class ThemeApp {
-  static final ThemeApp _singleton = ThemeApp._internal();
+class ThemeDataApp {
+  static bool _isDark;
+  static void setIsDark(BuildContext context) => ThemeDataApp._isDark =
+      DevicePreview.mediaQuery(context)?.platformBrightness == Brightness.dark;
+  // MediaQuery.of(context)?.platformBrightness == Brightness.dark; // Use this when is not using device preview package
+  static bool get isDark => ThemeDataApp._isDark;
 
-  factory ThemeApp() {
-    return _singleton;
-  }
+  static ThemeData get themeData => isDark ? themeDataDark : themeDataLight;
 
-  ThemeApp._internal();
+  static ThemeData themeDataLight = ThemeData(
+    brightness: Brightness.light,
+    primarySwatch: ColorSchemeApp.primarySwatch,
+    textTheme: TextThemeApp.textTheme, // TODO Discutir sobre
+    colorScheme: ColorSchemeApp.colorScheme,
+    appBarTheme: AppBarThemeApp.appBarTheme,
+    iconTheme: IconThemeData(
+      color: ColorSchemeApp.primarySwatch[500],
+    ),
+  );
 
-  ThemeData get themeData => ThemeData(
-        brightness: Brightness.light,
-        primarySwatch: primarySwatch,
-        iconTheme: IconThemeData(
-          color: primarySwatch[500],
-        ),
-      );
-
-  ThemeData get themeDataDark => ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: primarySwatch,
-        iconTheme: IconThemeData(
-          color: primarySwatch[500],
-        ),
-      );
-
-  MaterialColor primarySwatch = MaterialColor(
-    0xFFEB5A52,
-    const <int, Color>{
-      50: const Color(0xFFFEECEE),
-      100: const Color(0xFFFDCED2),
-      200: const Color(0xFFEC9D9B),
-      300: const Color(0xFFE27775),
-      400: const Color(0xFFEB5A52),
-      500: const Color(0xFFEF4C39),
-      600: const Color(0xFFE14338),
-      700: const Color(0xFFCF3A32),
-      800: const Color(0xFFC2342B),
-      900: const Color(0xFFB3291F),
-    },
+  static ThemeData themeDataDark = ThemeData(
+    brightness: Brightness.dark,
+    primarySwatch: ColorSchemeApp.primarySwatch,
+    colorScheme: ColorSchemeApp.colorScheme.copyWith(
+      brightness: Brightness.dark,
+    ),
+    textTheme: TextThemeApp.textTheme, // TODO Discutir sobre
+    iconTheme: IconThemeData(
+      color: ColorSchemeApp.primarySwatch[500],
+    ),
   );
 }

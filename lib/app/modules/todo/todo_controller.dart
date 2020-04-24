@@ -11,7 +11,7 @@ abstract class _TodoControllerBase with Store {
   final TodoRepository _repo;
 
   _TodoControllerBase(this._repo) {
-    this.getTodos();
+    getTodos();
   }
 
   @observable

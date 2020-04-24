@@ -1,3 +1,5 @@
+[![style: effective dart][https://img.shields.io/badge/style-effective_dart-40c4ff.svg]](https://github.com/tenhobi/effective_dart)
+
 # project_sample_base
 
 &#x27;A new Flutter project. Created by Slidy&#x27;
@@ -14,3 +16,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+https://material.io/design/typography/the-type-system.html#type-scale
+
+Shift + Alt + O  ->  Organize imports

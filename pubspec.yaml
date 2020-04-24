@@ -17,11 +17,16 @@ environment:
   sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
+  flutter_platform_widgets: ^0.32.5
+  device_preview: ^0.4.4
+  google_fonts: ^1.0.0
   dio: ^3.0.9
   flutter_mobx: ^1.1.0
   mobx: ^1.1.1
   flutter_modular: ^1.1.2
   flutter:
+    sdk: flutter
+  flutter_localizations:
     sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
@@ -31,6 +36,7 @@ dev_dependencies:
   mockito: ^4.1.1
   mobx_codegen: ^1.0.3
   build_runner: ^1.8.1
+  effective_dart: ^1.2.1
   flutter_test:
     sdk: flutter
 
