@@ -20,3 +20,6 @@ samples, guidance on mobile development, and a full API reference.
 https://material.io/design/typography/the-type-system.html#type-scale
 
 Shift + Alt + O  ->  Organize imports
+
+https://medium.com/flutterando/qual-a-forma-f%C3%A1cil-de-traduzir-seu-app-flutter-para-outros-idiomas-ab5178cf0336
+https://pub.dev/packages/i18n_extension#-readme-tab-
