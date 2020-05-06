@@ -10,8 +10,8 @@ import 'shared/dio/custom_dio.dart';
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
-    Bind<Dio>((i) => CustomDio()),
-  ];
+        Bind<Dio>((i) => CustomDio()),
+      ];
 
   @override
   List<Router> get routers => [

@@ -5,8 +5,12 @@ class AppException implements Exception {
   final int statusCode;
   final DioError dioError;
 
-  AppException({this.message = 'No message was provided', this.statusCode, this.dioError});
+  AppException(
+      {this.message = 'No message was provided',
+      this.statusCode,
+      this.dioError});
 
   @override
-  String toString() => 'AppException(message: $message, statusCode: $statusCode)';
+  String toString() =>
+      'AppException(message: $message, statusCode: $statusCode)';
 }

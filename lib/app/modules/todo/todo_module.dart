@@ -10,7 +10,8 @@ class TodoModule extends ChildModule {
   @override
   List<Bind> get binds => [
         Bind((i) => TodoController(Modular.get<TodoRepository>())),
-        Bind<TodoRepository>((i) => TodoRepositoryDio(Modular.get<CustomDio>())),
+        Bind<TodoRepository>(
+            (i) => TodoRepositoryDio(Modular.get<CustomDio>())),
       ];
 
   @override

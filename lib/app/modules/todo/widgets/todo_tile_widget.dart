@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:project_sample_base/app/modules/todo/models/todo_model.dart';
+
 class TodoTileWidget extends StatelessWidget {
   final TodoModel todo;
   final void Function() onPressedIcon;

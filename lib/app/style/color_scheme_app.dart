@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:project_sample_base/app/style/theme_app.dart';
 
 class ColorSchemeApp {
-  static ColorScheme get colorScheme => ThemeDataApp.isDark ? colorSchemeDark : colorSchemeLight;
+  static ColorScheme get colorScheme =>
+      ThemeDataApp.isDark ? colorSchemeDark : colorSchemeLight;
 
   static final ColorScheme colorSchemeLight = ColorScheme.fromSwatch(
     brightness: Brightness.light,
     primarySwatch: primarySwatch,
   );
-  
+
   static final ColorScheme colorSchemeDark = ColorScheme.fromSwatch(
     brightness: Brightness.dark,
     primarySwatch: primarySwatch,

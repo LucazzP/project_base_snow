@@ -14,8 +14,8 @@ class FlavorConfig {
     Color color = Colors.blue,
     @required FlavorValues values,
   }) {
-    _instance ??=
-        FlavorConfig._internal(flavor, flavor.toString().getNameFromEnum(), color, values);
+    _instance ??= FlavorConfig._internal(
+        flavor, flavor.toString().getNameFromEnum(), color, values);
     return _instance;
   }
 

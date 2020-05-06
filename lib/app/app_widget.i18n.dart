@@ -3,7 +3,6 @@ import 'package:i18n_extension/i18n_extension.dart';
 // For more info, see: https://pub.dartlang.org/packages/i18n_extension
 
 extension Localization on String {
-  
   static var t = Translations("pt_br") +
       {
         "pt_br": "Demonstração i18n",
