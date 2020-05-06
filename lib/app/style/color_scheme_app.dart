@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:project_sample_base/app/style/theme_app.dart';
 
 class ColorSchemeApp {
-  static ColorScheme colorScheme = ColorScheme.fromSwatch(
+  static ColorScheme get colorScheme => ThemeDataApp.isDark ? colorSchemeDark : colorSchemeLight;
+
+  static final ColorScheme colorSchemeLight = ColorScheme.fromSwatch(
     brightness: Brightness.light,
     primarySwatch: primarySwatch,
   );
+  
+  static final ColorScheme colorSchemeDark = ColorScheme.fromSwatch(
+    brightness: Brightness.dark,
+    primarySwatch: primarySwatch,
+  );
 
-  static MaterialColor primarySwatch = MaterialColor(
+  static final MaterialColor primarySwatch = MaterialColor(
     0xFFEB5A52,
     const <int, Color>{
       50: Color(0xFFFEECEE),

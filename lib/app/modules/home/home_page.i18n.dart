@@ -6,8 +6,8 @@ extension Localization on String {
   
   static var t = Translations("pt_br") +
       {
-        "pt_br": "Demonstração i18n",
-        "en_us": "i18n Demo",
+        "pt_br": "Página Todo",
+        "en_us": "Todo page",
       };
 
   String get i18n => localize(this, t);

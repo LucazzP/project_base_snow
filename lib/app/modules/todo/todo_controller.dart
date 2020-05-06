@@ -1,4 +1,5 @@
 import 'package:mobx/mobx.dart';
+
 import '../../shared/extensions.dart';
 import 'models/todo_model.dart';
 import 'repositories/todo_repository.dart';
@@ -19,11 +20,8 @@ abstract class _TodoControllerBase with Store {
 
   @action
   Future<ObservableList<TodoModel>> getTodos() async {
-    listTodos = _repo
-        .getTodos()
-        .map<ObservableList<TodoModel>>(
-            (transform) async => (await transform).asObservable())
-        .asObservable();
+    listTodos = _repo.getTodos().asObservable().map<ObservableList<TodoModel>>(
+        (transform) async => (await transform).asObservable());
     return listTodos;
   }
 

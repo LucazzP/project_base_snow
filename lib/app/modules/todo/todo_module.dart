@@ -1,5 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:project_sample_base/app/modules/todo/repositories/todo_repository_dio.dart';
+import 'package:project_sample_base/app/shared/dio/custom_dio.dart';
 
 import 'repositories/todo_repository.dart';
 import 'todo_controller.dart';
@@ -9,7 +10,7 @@ class TodoModule extends ChildModule {
   @override
   List<Bind> get binds => [
         Bind((i) => TodoController(Modular.get<TodoRepository>())),
-        Bind<TodoRepository>((i) => TodoRepositoryDio(Modular.get())),
+        Bind<TodoRepository>((i) => TodoRepositoryDio(Modular.get<CustomDio>())),
       ];
 
   @override
