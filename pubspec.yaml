@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
+  catcher: ^0.3.6
   animations: ^1.0.0+5
   device_info: ^0.4.2+3
   intl: ^0.16.1

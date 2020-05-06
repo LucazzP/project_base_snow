@@ -17,17 +17,15 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return FlavorBannerWidget(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text("Home"),
-        ),
-        body: Center(
-          child: PlatformButton(
-            onPressed: () => Navigator.of(context).pushNamed('/todo'),
-            child: Text(
-              "Página Todo".i18n,
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Home"),
+      ),
+      body: Center(
+        child: PlatformButton(
+          onPressed: () => Navigator.of(context).pushNamed('/todo'),
+          child: Text(
+            "Página Todo".i18n,
           ),
         ),
       ),

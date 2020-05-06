@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:i18n_extension/i18n_widget.dart';
+import 'package:project_sample_base/app/shared/widgets/flavor_banner/flavor_banner_widget.dart';
 import 'package:project_sample_base/app/style/theme_app.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -50,7 +51,9 @@ class _AppBuilder extends StatelessWidget {
 
   Widget get _body => I18n(
         child: ResponsiveWrapper.builder(
-          child,
+          FlavorBannerWidget(
+            child: child,
+          ),
           defaultScale: true,
           breakpoints: [
             const ResponsiveBreakpoint(breakpoint: 450, name: MOBILE),

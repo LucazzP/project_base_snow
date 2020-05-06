@@ -99,6 +99,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "7.1.0"
+  catcher:
+    dependency: "direct main"
+    description:
+      name: catcher
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.6"
   charcode:
     dependency: transitive
     description:
@@ -228,6 +235,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_mailer:
+    dependency: transitive
+    description:
+      name: flutter_mailer
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.0-dev.7"
   flutter_mobx:
     dependency: "direct main"
     description:
@@ -259,6 +273,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  fluttertoast:
+    dependency: transitive
+    description:
+      name: fluttertoast
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.1"
   font_awesome_flutter:
     dependency: transitive
     description:
@@ -371,6 +392,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.11.4"
+  mailer:
+    dependency: transitive
+    description:
+      name: mailer
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.4"
   matcher:
     dependency: transitive
     description:
@@ -441,6 +469,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.9.3"
+  package_info:
+    dependency: transitive
+    description:
+      name: package_info
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.0+17"
   path:
     dependency: transitive
     description:
@@ -525,6 +560,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.5"
+  sentry:
+    dependency: transitive
+    description:
+      name: sentry
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.1"
   shared_preferences:
     dependency: transitive
     description:
@@ -670,6 +712,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.6"
+  usage:
+    dependency: transitive
+    description:
+      name: usage
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.4.1"
   vector_math:
     dependency: transitive
     description:
@@ -700,4 +749,4 @@ packages:
     version: "2.2.1"
 sdks:
   dart: ">=2.7.0 <3.0.0"
-  flutter: ">=1.12.13+hotfix.5 <2.0.0"
+  flutter: ">=1.12.13+hotfix.6 <2.0.0"

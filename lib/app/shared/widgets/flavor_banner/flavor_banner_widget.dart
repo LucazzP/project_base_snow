@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:project_sample_base/app/shared/config/flavor_config.dart';
 import 'package:project_sample_base/app/shared/widgets/custom_alert_dialog/custom_alert_dialog.dart';
 import '../../models/banner_config_model.dart';
@@ -26,7 +27,7 @@ class FlavorBannerWidget extends StatelessWidget {
   Widget _buildBanner(BuildContext context) {
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
-      onLongPress: () => CustomAlertDialog.deviceInfo(context),
+      onLongPress: () => CustomAlertDialog.deviceInfo(Modular.navigatorKey.currentState.overlay.context),
       child: Container(
         width: 50,
         height: 50,
