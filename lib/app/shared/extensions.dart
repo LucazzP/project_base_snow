@@ -13,6 +13,6 @@ extension FutureExtension<T> on Future<T> {
 extension StringExtension on String {
   String getNameFromEnum() {
     if (this == null || !contains(".")) return this;
-    return replaceRange(0, indexOf("."), "");
+    return replaceRange(0, indexOf(".") + 1, "");
   }
 }

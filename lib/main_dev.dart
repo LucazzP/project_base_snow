@@ -18,7 +18,7 @@ void main() {
 
   Catcher(
     DevicePreview(
-      enabled: true ?? !kReleaseMode,
+      enabled: false ?? !kReleaseMode,
       builder: (context) => ModularApp(
         module: AppModule(),
       ),

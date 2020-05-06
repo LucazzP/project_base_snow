@@ -13,6 +13,31 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context, nullOk: true);
+
+    return MaterialApp(
+      title: 'Flutter project sample base',
+      locale: DevicePreview.of(context)?.locale, // <--
+      builder: (context, child) => _AppBuilder(child: child),
+      navigatorKey: Modular.navigatorKey,
+      onGenerateRoute: Modular.generateRoute,
+      initialRoute: '/',
+      supportedLocales: const [
+        Locale('en', 'US'),
+        Locale('pt', 'BR'),
+      ],
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      theme: ThemeDataApp.themeDataLight,
+      darkTheme: ThemeDataApp.themeDataDark,
+      themeMode: mediaQuery?.platformBrightness == null
+          ? ThemeMode.system
+          : mediaQuery?.platformBrightness == Brightness.dark
+              ? ThemeMode.dark
+              : ThemeMode.light,
+    );
     return PlatformApp(
       title: 'Flutter project sample base',
       locale: DevicePreview.of(context)?.locale, // <--
