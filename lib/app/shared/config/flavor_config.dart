@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import '../extensions.dart';
 
+@immutable
 class FlavorConfig {
   final Flavor flavor;
   final String name;
@@ -13,11 +15,11 @@ class FlavorConfig {
     @required FlavorValues values,
   }) {
     _instance ??=
-        FlavorConfig._internal(flavor, flavor.toStringEnum(), color, values);
+        FlavorConfig._internal(flavor, flavor.toString().getNameFromEnum(), color, values);
     return _instance;
   }
 
-  FlavorConfig._internal(this.flavor, this.name, this.color, this.values);
+  const FlavorConfig._internal(this.flavor, this.name, this.color, this.values);
   static FlavorConfig get instance => _instance;
 
   static bool get isProduction => _instance.flavor == Flavor.production;
@@ -26,12 +28,6 @@ class FlavorConfig {
 }
 
 enum Flavor { dev, qa, production }
-
-extension FlavorExtension on Flavor {
-  String toStringEnum() {
-    return toString().replaceFirst("Flavor.", "");
-  }
-}
 
 class FlavorValues {
   FlavorValues({@required this.baseUrl});

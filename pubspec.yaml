@@ -17,6 +17,8 @@ environment:
   sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
+  animations: ^1.0.0+5
+  device_info: ^0.4.2+3
   intl: ^0.16.1
   dio_interceptors: ^0.0.4+1
   dio_http_cache: ^0.2.6

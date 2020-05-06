@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Flutter Dev",
+            "name": "Flutter Dev - DEBUG",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_dev.dart",
@@ -15,7 +15,7 @@
             ]
         },
         {
-            "name": "Flutter QA",
+            "name": "Flutter QA - DEBUG",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_qa.dart",
@@ -25,13 +25,79 @@
             ]
         },
         {
-            "name": "Flutter Prod",
+            "name": "Flutter Prod - DEBUG",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_production.dart",
             "args": [
                 "--flavor",
                 "prod"
+            ]
+        },
+        {
+            "name": "Flutter Dev - PROFILE",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_dev.dart",
+            "args": [
+                "--flavor",
+                "dev",
+                "--profile"
+            ]
+        },
+        {
+            "name": "Flutter QA - PROFILE",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_qa.dart",
+            "args": [
+                "--flavor",
+                "qa",
+                "--profile"
+            ]
+        },
+        {
+            "name": "Flutter Prod - PROFILE",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_production.dart",
+            "args": [
+                "--flavor",
+                "prod",
+                "--profile"
+            ]
+        },
+        {
+            "name": "Flutter Dev - RELEASE",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_dev.dart",
+            "args": [
+                "--flavor",
+                "dev",
+                "--release"
+            ]
+        },
+        {
+            "name": "Flutter QA - RELEASE",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_qa.dart",
+            "args": [
+                "--flavor",
+                "qa",
+                "--release"
+            ]
+        },
+        {
+            "name": "Flutter Prod - RELEASE",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_production.dart",
+            "args": [
+                "--flavor",
+                "prod",
+                "--release"
             ]
         }
     ]
