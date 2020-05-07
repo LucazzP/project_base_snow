@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../extensions.dart';
+import 'flavor_values.dart';
 
 @immutable
 class FlavorConfig {
@@ -9,14 +10,29 @@ class FlavorConfig {
   final FlavorValues values;
   static FlavorConfig _instance;
 
-  factory FlavorConfig({
-    @required Flavor flavor,
-    Color color = Colors.blue,
-    @required FlavorValues values,
-  }) {
+  factory FlavorConfig({@required Flavor flavor, Color color = Colors.blue}) {
     _instance ??= FlavorConfig._internal(
-        flavor, flavor.toString().getNameFromEnum(), color, values);
+        flavor, flavor.toString().getNameFromEnum(), color, _valuesFromFlavor(flavor));
     return _instance;
+  }
+
+  static FlavorValues _valuesFromFlavor(Flavor flavor) {
+    switch (flavor) {
+      case Flavor.dev:
+        return FlavorValues(
+          baseUrl: 'https://jsonplaceholder.typicode.com',
+        );
+      case Flavor.qa:
+        return FlavorValues(
+          baseUrl: 'https://jsonplaceholder.typicode.com',
+        );
+      case Flavor.production:
+        return FlavorValues(
+          baseUrl: 'https://jsonplaceholder.typicode.com',
+        );
+      default:
+        return null;
+    }
   }
 
   const FlavorConfig._internal(this.flavor, this.name, this.color, this.values);
@@ -28,9 +44,3 @@ class FlavorConfig {
 }
 
 enum Flavor { dev, qa, production }
-
-class FlavorValues {
-  FlavorValues({@required this.baseUrl});
-  final String baseUrl;
-  //Add other flavor specific values, e.g database name
-}

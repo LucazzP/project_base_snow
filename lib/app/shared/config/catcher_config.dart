@@ -3,7 +3,7 @@ import 'package:catcher/catcher_plugin.dart';
 class CatcherConfig {
   //debug configuration
   static final debugOptions = CatcherOptions(
-    DialogReportMode(),
+    SilentReportMode(),
     [ConsoleHandler()],
   );
 

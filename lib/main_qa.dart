@@ -9,10 +9,7 @@ import 'app/shared/config/flavor_config.dart';
 void main() {
   FlavorConfig(
     flavor: Flavor.qa,
-    color: Colors.deepPurpleAccent,
-    values: FlavorValues(
-      baseUrl: "",
-    ),
+    color: Colors.deepPurpleAccent
   );
 
   Catcher(

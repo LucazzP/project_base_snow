@@ -7,10 +7,7 @@ import 'app/shared/config/flavor_config.dart';
 
 void main() {
   FlavorConfig(
-    flavor: Flavor.production,
-    values: FlavorValues(
-      baseUrl: "",
-    ),
+    flavor: Flavor.production
   );
 
   Catcher(

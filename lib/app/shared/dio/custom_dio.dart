@@ -8,11 +8,11 @@ import 'package:project_sample_base/app/shared/models/exception_custom.dart';
 import 'interceptors/log_interceptor.dart' as log;
 
 class CustomDio extends DioForNative {
-  CustomDio({bool isMock = false}) {
+  CustomDio({bool isMock = false, String baseUrl}) {
     options.connectTimeout = 10000;
     options.sendTimeout = 10000;
     options.receiveTimeout = 10000;
-    options.baseUrl = '';
+    options.baseUrl = baseUrl;
 
     interceptors.add(log.LogInterceptor());
     if (isMock) {
