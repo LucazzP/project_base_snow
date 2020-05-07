@@ -11,8 +11,8 @@ class FlavorConfig {
   static FlavorConfig _instance;
 
   factory FlavorConfig({@required Flavor flavor, Color color = Colors.blue}) {
-    _instance ??= FlavorConfig._internal(
-        flavor, flavor.toString().getNameFromEnum(), color, _valuesFromFlavor(flavor));
+    _instance ??= FlavorConfig._internal(flavor,
+        flavor.toString().getNameFromEnum(), color, _valuesFromFlavor(flavor));
     return _instance;
   }
 

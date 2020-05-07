@@ -7,10 +7,7 @@ import 'app/shared/config/catcher_config.dart';
 import 'app/shared/config/flavor_config.dart';
 
 void main() {
-  FlavorConfig(
-    flavor: Flavor.qa,
-    color: Colors.deepPurpleAccent
-  );
+  FlavorConfig(flavor: Flavor.qa, color: Colors.deepPurpleAccent);
 
   Catcher(
     ModularApp(

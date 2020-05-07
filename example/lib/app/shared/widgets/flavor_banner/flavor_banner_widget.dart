@@ -27,7 +27,8 @@ class FlavorBannerWidget extends StatelessWidget {
   Widget _buildBanner(BuildContext context) {
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
-      onLongPress: () => CustomAlertDialog.deviceInfo(Modular.navigatorKey.currentState.overlay.context),
+      onLongPress: () => CustomAlertDialog.deviceInfo(
+          Modular.navigatorKey.currentState.overlay.context),
       child: Container(
         width: 50,
         height: 50,

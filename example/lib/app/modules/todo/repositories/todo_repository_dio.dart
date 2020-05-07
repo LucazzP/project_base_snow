@@ -9,8 +9,7 @@ class TodoRepositoryDio implements TodoRepository {
   TodoRepositoryDio(this._client);
 
   Future<List<TodoModel>> getTodos() async {
-    final response =
-        await _client.get<List>('/todos');
+    final response = await _client.get<List>('/todos');
     return response.data
         .map<TodoModel>((element) => TodoModel.fromMap(element))
         .toList();

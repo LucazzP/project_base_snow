@@ -9,10 +9,7 @@ import 'app/shared/config/catcher_config.dart';
 import 'app/shared/config/flavor_config.dart';
 
 void main() {
-  FlavorConfig(
-    flavor: Flavor.dev,
-    color: Colors.green
-  );
+  FlavorConfig(flavor: Flavor.dev, color: Colors.green);
 
   Catcher(
     DevicePreview(

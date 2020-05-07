@@ -5,7 +5,6 @@ import 'package:mobx_widget/mobx_widget.dart';
 import 'package:project_sample_base/app/modules/todo/models/todo_model.dart';
 import 'package:project_sample_base/app/modules/todo/widgets/todo_tile_widget.dart';
 import 'package:project_sample_base/app/shared/models/exception_custom.dart';
-import 'package:project_sample_base/app/style/color_scheme_app.dart';
 
 import 'todo_controller.dart';
 

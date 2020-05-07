@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-import 'package:project_sample_base/app/shared/widgets/flavor_banner/flavor_banner_widget.dart';
 import 'home_controller.dart';
 import 'home_page.i18n.dart';
 
