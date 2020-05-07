@@ -1,25 +1,18 @@
-import 'package:catcher/catcher_plugin.dart';
-import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:projectbasesnow/projectbasesnow.dart';
 
 import 'app/app_module.dart';
-import 'app/shared/config/catcher_config.dart';
-import 'app/shared/config/flavor_config.dart';
+import 'app/shared/models/flavor_values.dart';
 
 void main() {
-  FlavorConfig(flavor: Flavor.dev, color: Colors.green);
-
-  Catcher(
-    DevicePreview(
-      enabled: false ?? !kReleaseMode,
-      builder: (context) => ModularApp(
-        module: AppModule(),
-      ),
+  RunAppSnow(
+    ModularApp(
+      module: AppModule(),
     ),
-    navigatorKey: Modular.navigatorKey,
-    debugConfig: CatcherConfig.debugOptions,
-    releaseConfig: CatcherConfig.releaseOptions,
+    flavorValues: FlavorValuesApp(
+      baseUrl: 'https://jsonplaceholder.typicode.com',
+    ),
+    flavor: Flavor.dev,
+    enableDevicePreview: true
   );
 }

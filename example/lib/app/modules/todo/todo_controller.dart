@@ -1,6 +1,6 @@
 import 'package:mobx/mobx.dart';
+import 'package:projectbasesnow/extensions.dart';
 
-import '../../shared/extensions.dart';
 import 'models/todo_model.dart';
 import 'repositories/todo_repository.dart';
 

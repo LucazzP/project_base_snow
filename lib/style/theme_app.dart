@@ -1,9 +1,10 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project_sample_base/app/style/app_bar_theme_app.dart';
-import 'package:project_sample_base/app/style/color_scheme_app.dart';
-import 'package:project_sample_base/app/style/text_theme_app.dart';
+
+import 'app_bar_theme_app.dart';
+import 'color_scheme_app.dart';
+import 'text_theme_app.dart';
 
 /// https://medium.com/flutter-community/page-transitions-using-themedata-in-flutter-c24afadb0b5d
 class ThemeDataApp {

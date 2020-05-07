@@ -1,19 +1,17 @@
-import 'package:catcher/catcher_plugin.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:project_sample_base/app/app_module.dart';
+import 'package:projectbasesnow/projectbasesnow.dart';
 
-import 'app/shared/config/catcher_config.dart';
-import 'app/shared/config/flavor_config.dart';
+import 'app/shared/models/flavor_values.dart';
 
 void main() {
-  FlavorConfig(flavor: Flavor.production);
-
-  Catcher(
+  RunAppSnow(
     ModularApp(
       module: AppModule(),
     ),
-    navigatorKey: Modular.navigatorKey,
-    debugConfig: CatcherConfig.debugOptions,
-    releaseConfig: CatcherConfig.releaseOptions,
+    flavorValues: FlavorValuesApp(
+      baseUrl: 'https://jsonplaceholder.typicode.com',
+    ),
+    flavor: Flavor.production,
   );
 }

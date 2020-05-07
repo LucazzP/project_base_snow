@@ -2,13 +2,12 @@ import 'package:dio/dio.dart';
 import 'package:dio/native_imp.dart';
 import 'package:dio_http_cache/dio_http_cache.dart';
 import 'package:dio_interceptors/dio_interceptors.dart';
-import 'package:project_sample_base/app/shared/dio/interceptors/cache_interceptor.dart';
-import 'package:project_sample_base/app/shared/dio/mock/mock_data.dart';
-import 'package:project_sample_base/app/shared/models/exception_custom.dart';
+import 'package:projectbasesnow/models/app_exception.dart';
+import 'interceptors/cache_interceptor.dart';
 import 'interceptors/log_interceptor.dart' as log;
 
 class CustomDio extends DioForNative {
-  CustomDio({bool isMock = false, String baseUrl}) {
+  CustomDio({bool isMock = false, String baseUrl, Mock mockData}) {
     options.connectTimeout = 10000;
     options.sendTimeout = 10000;
     options.receiveTimeout = 10000;

@@ -53,3 +53,6 @@ WidgetTesting: https://iiro.dev/2018/08/22/writing-widget-tests-for-navigation-e
 `flutter run -–release –-flavor prod -t lib/main_production.dart`<br>
 
 *Sometimes between changing flavors is necessary a flutter clean to clean our app build files.*
+
+#### Mobx:<br>
+`flutter pub run build_runner watch --delete-conflicting-outputs`

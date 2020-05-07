@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_sample_base/app/style/theme_app.dart';
+import 'theme_app.dart';
 
 class ColorSchemeApp {
   static ColorScheme get colorScheme =>
