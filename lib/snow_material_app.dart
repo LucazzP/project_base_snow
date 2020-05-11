@@ -3,10 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:i18n_extension/i18n_widget.dart';
+import 'package:projectbasesnow/projectbasesnow.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import 'style/theme_app.dart';
 import 'widgets/flavor_banner/flavor_banner_widget.dart';
 
 class SnowMaterialApp extends StatelessWidget {
@@ -36,7 +37,7 @@ class SnowMaterialApp extends StatelessWidget {
   final bool showSemanticsDebugger;
   final bool debugShowCheckedModeBanner;
   final Map<LogicalKeySet, Intent> shortcuts;
-  final Map<Type, Action<Intent>> actions;
+  final Map<LocalKey, ActionFactory> actions;
   final bool debugShowMaterialGrid;
 
   const SnowMaterialApp({
@@ -55,7 +56,7 @@ class SnowMaterialApp extends StatelessWidget {
     this.color,
     this.theme,
     this.darkTheme,
-    this.themeMode = ThemeMode.system,
+    this.themeMode,
     this.locale,
     this.localizationsDelegates,
     this.localeListResolutionCallback,
@@ -93,8 +94,22 @@ class SnowMaterialApp extends StatelessWidget {
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-      theme: theme ?? ThemeDataApp.themeDataLight,
-      darkTheme: darkTheme ?? ThemeDataApp.themeDataDark,
+      theme: theme ?? ThemeData(),
+      darkTheme: darkTheme ?? ThemeData(
+        brightness: Brightness.dark,
+        accentColorBrightness: Brightness.dark,
+        textTheme: GoogleFonts.robotoTextTheme(),
+        pageTransitionsTheme: const PageTransitionsTheme(
+          builders: {
+            TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+            TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+            TargetPlatform.fuchsia: ZoomPageTransitionsBuilder(),
+          },
+        ),
+        cupertinoOverrideTheme: CupertinoThemeData(
+          brightness: Brightness.dark,
+        ),
+      ),
       themeMode: themeMode ??
           (mediaQuery?.platformBrightness == null
               ? ThemeMode.system
@@ -147,7 +162,7 @@ class _AppBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ThemeDataApp.setIsDark(context);
+    ThemeDataSnow.setIsDark(context);
     if (DevicePreview.of(context) == null) {
       return _body;
     } else {

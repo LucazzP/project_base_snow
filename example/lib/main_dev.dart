@@ -13,6 +13,6 @@ void main() {
       baseUrl: 'https://jsonplaceholder.typicode.com',
     ),
     flavor: Flavor.dev,
-    enableDevicePreview: true
+    enableDevicePreview: true,
   );
 }

@@ -6,6 +6,7 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return SnowMaterialApp();
+    return SnowMaterialApp(
+    );
   }
 }

@@ -2,7 +2,6 @@ name: projectbasesnow
 description: A new Flutter package that is used to base all flutter projects of snowmanlabs.
 version: 0.0.1
 author:
-homepage:
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
